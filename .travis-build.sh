@@ -13,4 +13,4 @@ export CHECKERFRAMEWORK=$ROOT/checker-framework
 ## Obtain daikon
 (cd $ROOT && git clone https://github.com/codespecs/daikon.git)
 
-make -C $ROOT/daikon/java check-all
+travis_wait 120 make -C $ROOT/daikon/java check-all
