@@ -7,8 +7,6 @@ set -e
 ## Short version, intended to be used when triggering downstream Travis jobs.
 echo "Should next trigger downstream jobs."
 true
-# Experimentally fail the build
-false
 
 ## Long version, that does all the work itself.
 ## Problem: this times out.  I need to break it into different Travis jobs.
