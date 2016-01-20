@@ -4,6 +4,10 @@ ROOT=$TRAVIS_BUILD_DIR/..
 # Fail the whole script if any command fails
 set -e
 
+echo "Should next trigger downstream jobs."
+
+true
+
 ## Problem: this times out.  I need to break it into different Travis jobs.
 ## So just always succeed and run the other jobs.
 # ## Build Checker Framework
