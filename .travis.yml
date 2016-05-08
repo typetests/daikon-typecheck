@@ -20,3 +20,6 @@ after_success:
         sleep 1
         sh trigger-travis.sh typetools daikon-typecheck-signature $TRAVIS_ACCESS_TOKEN
       fi
+
+git:
+  depth: 3
