@@ -10,17 +10,17 @@ after_success:
             ($TRAVIS_PULL_REQUEST == false) &&
             ( (! $TRAVIS_JOB_NUMBER == *.*) || ($TRAVIS_JOB_NUMBER == *.1) ) ]] ; then
         curl -LO https://raw.github.com/mernst/plume-lib/master/bin/trigger-travis.sh
-        sh trigger-travis.sh typetools daikon-typecheck-formatter $TRAVIS_ACCESS_TOKEN
+        sh trigger-travis.sh typetests daikon-typecheck-formatter $TRAVIS_ACCESS_TOKEN
         sleep 1
-        sh trigger-travis.sh typetools daikon-typecheck-interning $TRAVIS_ACCESS_TOKEN
+        sh trigger-travis.sh typetests daikon-typecheck-interning $TRAVIS_ACCESS_TOKEN
         sleep 1
-        sh trigger-travis.sh typetools daikon-typecheck-lock $TRAVIS_ACCESS_TOKEN
+        sh trigger-travis.sh typetests daikon-typecheck-lock $TRAVIS_ACCESS_TOKEN
         sleep 1
-        sh trigger-travis.sh typetools daikon-typecheck-nullness $TRAVIS_ACCESS_TOKEN
+        sh trigger-travis.sh typetests daikon-typecheck-nullness $TRAVIS_ACCESS_TOKEN
         sleep 1
-        sh trigger-travis.sh typetools daikon-typecheck-regex $TRAVIS_ACCESS_TOKEN
+        sh trigger-travis.sh typetests daikon-typecheck-regex $TRAVIS_ACCESS_TOKEN
         sleep 1
-        sh trigger-travis.sh typetools daikon-typecheck-signature $TRAVIS_ACCESS_TOKEN
+        sh trigger-travis.sh typetests daikon-typecheck-signature $TRAVIS_ACCESS_TOKEN
       fi
 
 git:
