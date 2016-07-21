@@ -20,9 +20,6 @@ export CHECKERFRAMEWORK=$ROOT/checker-framework
  
 ## Obtain daikon
 (cd $ROOT && git clone --depth 1 https://github.com/codespecs/daikon.git)
-
-## Obtain daikon
-(cd $ROOT && git clone --depth 1 https://github.com/codespecs/daikon.git)
 ## Is the dyncomp-jdk task needed?
 # make -C $ROOT/daikon/java compile dyncomp-jdk
 make -C $ROOT/daikon/java compile
