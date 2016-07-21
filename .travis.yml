@@ -26,8 +26,8 @@ after_success:
         # sleep 1
         # sh trigger-travis.sh typetests daikon-typecheck-lock $TRAVIS_ACCESS_TOKEN
         # sleep 1
-        sh trigger-travis.sh typetests daikon-typecheck-nullness $TRAVIS_ACCESS_TOKEN
-        sleep 1
+        # sh trigger-travis.sh typetests daikon-typecheck-nullness $TRAVIS_ACCESS_TOKEN
+        # sleep 1
         # sh trigger-travis.sh typetests daikon-typecheck-regex $TRAVIS_ACCESS_TOKEN
         # sleep 1
         # sh trigger-travis.sh typetests daikon-typecheck-signature $TRAVIS_ACCESS_TOKEN
