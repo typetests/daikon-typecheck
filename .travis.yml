@@ -11,7 +11,7 @@ env:
   - GROUP=signature
   - GROUP=nothing
 
-script: ./.travis-build.sh $GROUP
+script: travis_wait 120 ./.travis-build.sh $GROUP
 
 after_success:
   - |
