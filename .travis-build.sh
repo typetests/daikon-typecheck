@@ -30,15 +30,11 @@ make -C $ROOT/daikon daikon.jar
 ## error that occurred.
 ## make -C $ROOT/daikon/java check-all
 
-# As of July 2016, timing for Travis jobs (which includes building the Checker Framework and Daikon):
-# check-formatter : 30 minutes
-# check-interning : 32 minutes
-# check-lock : 40 minutes
-# check-nullness : 96 minutes
-# check-regex : 33 minutes
-# check-signature : 30 minutes
-# How are the long run times for check-nullness possible?
-# Keep that as a downstream job if it times out now?
+# As of July 2016, the "nothing" group takes 15 minutes, on Travis, and all
+# the others take between 20 and 25 minutes, except nullness which takes
+# 85 minutes.  This indicates that typechecking itself takes 5-10 minutes
+# for all but one type system.  So, I could probably fit them into fewer
+# jobs if I want.
 
 if [[ "$1" == "formatter" ]]; then
   make -C $ROOT/daikon/java check-formatter
