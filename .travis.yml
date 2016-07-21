@@ -9,7 +9,8 @@ env:
   - GROUP=nullness
   - GROUP=regex
   - GROUP=signature
-  - GROUP=nothing
+## This is just to determine the time to do the background build.
+#  - GROUP=nothing
 
 script: travis_wait 120 ./.travis-build.sh $GROUP
 
