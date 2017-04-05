@@ -15,7 +15,7 @@ true
 ## Build Checker Framework
 (cd $ROOT && git clone --depth 1 https://github.com/typetools/checker-framework.git)
 # This also builds annotation-tools and jsr308-langtools
-(cd $ROOT/checker-framework/ && ./.travis-build-without-test.sh)
+(cd $ROOT/checker-framework/ && ./.travis-build-without-test.sh downloadjdk)
 export CHECKERFRAMEWORK=$ROOT/checker-framework
 
 ## Obtain daikon
@@ -50,6 +50,8 @@ elif [[ "$1" == "regex" ]]; then
   make -C $ROOT/daikon/java check-regex
 elif [[ "$1" == "signature" ]]; then
   make -C $ROOT/daikon/java check-signature
+elif [[ "$1" == "index" ]]; then
+  make -C $ROOT/daikon/java check-index
 elif [[ "$1" == "nothing" ]]; then
   true
 else
