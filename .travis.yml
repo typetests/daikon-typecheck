@@ -10,6 +10,7 @@ env:
   - GROUP=nullness-raw
   - GROUP=regex
   - GROUP=signature
+  - GROUP=index
 ## This is just to determine the time to do the background build.
 #  - GROUP=nothing
 
