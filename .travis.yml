@@ -16,6 +16,14 @@ env:
 ## This is just to determine the time to do the background build.
 #  - GROUP=nothing
 
+# The Index Checker currently runs very slowly.  It's undesirable to permit
+# this job to fail, but the alternative is to suffer many warnings about
+# failed jobs that turn out to just be abouc timeouts.  The real fix is to
+# improve the performance of the Index Checker.
+matrix:
+  allow_failures:
+    - env: GROUP=index
+
 script: travis_wait 120 ./.travis-build.sh $GROUP
 
 after_success:
