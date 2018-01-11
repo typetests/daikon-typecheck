@@ -37,21 +37,21 @@ make -C $ROOT/daikon daikon.jar
 # jobs if I want.
 
 if [[ "$1" == "formatter" ]]; then
-  make -C $ROOT/daikon/java check-formatter
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-formatter
 elif [[ "$1" == "interning" ]]; then
-  make -C $ROOT/daikon/java check-interning
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-interning
 elif [[ "$1" == "lock" ]]; then
-  make -C $ROOT/daikon/java check-lock
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-lock
 elif [[ "$1" == "nullness-fbc" ]]; then
-  make -C $ROOT/daikon/java check-nullness-fbc
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-nullness-fbc
 elif [[ "$1" == "nullness-raw" ]]; then
-  make -C $ROOT/daikon/java check-nullness-raw
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-nullness-raw
 elif [[ "$1" == "regex" ]]; then
-  make -C $ROOT/daikon/java check-regex
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-regex
 elif [[ "$1" == "signature" ]]; then
-  make -C $ROOT/daikon/java check-signature
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-signature
 elif [[ "$1" == "index" ]]; then
-  make -C $ROOT/daikon/java check-index
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-index
 elif [[ "$1" == "nothing" ]]; then
   true
 else
