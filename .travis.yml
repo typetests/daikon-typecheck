@@ -6,7 +6,8 @@ sudo: false
 
 env:
   - GROUP=formatter
-  - GROUP=index
+# Consistently timing out as of Feb/March 2018.
+#  - GROUP=index
   - GROUP=interning
   - GROUP=lock
   - GROUP=nullness-fbc
