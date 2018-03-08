@@ -38,6 +38,8 @@ make -C $ROOT/daikon daikon.jar
 
 if [[ "$1" == "formatter" ]]; then
   make -C $ROOT/daikon/java check-formatter
+elif [[ "$1" == "index" ]]; then
+  make -C $ROOT/daikon/java check-index
 elif [[ "$1" == "interning" ]]; then
   make -C $ROOT/daikon/java check-interning
 elif [[ "$1" == "lock" ]]; then
@@ -50,8 +52,6 @@ elif [[ "$1" == "regex" ]]; then
   make -C $ROOT/daikon/java check-regex
 elif [[ "$1" == "signature" ]]; then
   make -C $ROOT/daikon/java check-signature
-elif [[ "$1" == "index" ]]; then
-  make -C $ROOT/daikon/java check-index
 elif [[ "$1" == "nothing" ]]; then
   true
 else
