@@ -16,9 +16,10 @@ env:
 ## This is just to determine the time to do the background build.
 #  - GROUP=nothing
 
-matrix:
-  allow_failures:
-    - env: GROUP=index
+## This sometimes times out.
+# matrix:
+#   allow_failures:
+#     - env: GROUP=index
 
 # The fcntl line works around a bug where Travis truncates logs and fails.
 script:
