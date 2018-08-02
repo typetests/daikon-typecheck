@@ -25,6 +25,11 @@ export CHECKERFRAMEWORK=$ROOT/checker-framework
 make -C $ROOT/daikon/java compile
 make -C $ROOT/daikon daikon.jar
 
+echo ""
+(cd $CHECKERFRAMEWORK && echo "Checker Framework version:" && git rev-parse HEAD && git log --oneline --format=%B -n 1 HEAD | head -n 1)
+(cd $ROOT/daikon && echo "Daikon version:" && git rev-parse HEAD && git log --oneline --format=%B -n 1 HEAD | head -n 1)
+echo ""
+
 ## It would be better to just run "make check-all", but that times out, so break
 ## it into different Travis jobs.  That also helps to indicate the specific
 ## error that occurred.
