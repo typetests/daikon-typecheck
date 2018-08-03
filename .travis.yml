@@ -31,7 +31,7 @@ after_success:
       if [[ ($TRAVIS_BRANCH == master) &&
             ($TRAVIS_PULL_REQUEST == false) &&
             ( (! $TRAVIS_JOB_NUMBER == *.*) || ($TRAVIS_JOB_NUMBER == *.1) ) ]] ; then
-        curl -LO https://raw.github.com/mernst/plume-lib/master/bin/trigger-travis.sh
+        curl -LO https://raw.github.com/plume-lib/trigger-travis/master/trigger-travis.sh
         # sh trigger-travis.sh typetests daikon-typecheck-formatter $TRAVIS_ACCESS_TOKEN
         # sleep 1
         # sh trigger-travis.sh typetests daikon-typecheck-interning $TRAVIS_ACCESS_TOKEN
