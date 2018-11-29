@@ -57,6 +57,8 @@ elif [[ "$1" == "regex" ]]; then
   make -C $ROOT/daikon/java check-regex
 elif [[ "$1" == "signature" ]]; then
   make -C $ROOT/daikon/java check-signature
+elif [[ "$1" == "index" ]]; then
+  make -C $ROOT/daikon/java JAVACHECK_EXTRA_ARGS=-Afilenames check-index
 elif [[ "$1" == "nothing" ]]; then
   true
 else

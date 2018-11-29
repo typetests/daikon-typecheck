@@ -33,7 +33,7 @@ env:
 # The fcntl line works around a bug where Travis truncates logs and fails.
 script:
 - python -c "import fcntl; fcntl.fcntl(1, fcntl.F_SETFL, 0)"
-- travis_wait 120 ./.travis-build.sh $GROUP
+- ./.travis-build.sh $GROUP
 
 after_success:
   - |
