@@ -3,8 +3,6 @@ language: java
 jdk:
   - oraclejdk8
 
-sudo: false
-
 ## On rare occasions, this breaks the build.  So don't use a cache.
 # before_cache:
 #   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
