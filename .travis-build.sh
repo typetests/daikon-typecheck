@@ -12,7 +12,7 @@ set -e
 echo "Should next trigger downstream jobs."
 true
 
-BRANCH=master
+BRANCH=treepathcacher
 
 ## Build Checker Framework
 (cd $ROOT && git clone --depth 1 --branch $BRANCH https://github.com/typetools/checker-framework.git) || (cd $ROOT && git clone --depth 1 --branch $BRANCH https://github.com/typetools/checker-framework.git)
