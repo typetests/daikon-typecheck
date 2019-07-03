@@ -51,10 +51,8 @@ elif [[ "$1" == "interning" ]]; then
   make -C $ROOT/daikon/java check-interning
 elif [[ "$1" == "lock" ]]; then
   make -C $ROOT/daikon/java check-lock
-elif [[ "$1" == "nullness-fbc" ]]; then
-  make -C $ROOT/daikon/java check-nullness-fbc
-elif [[ "$1" == "nullness-raw" ]]; then
-  make -C $ROOT/daikon/java check-nullness-raw
+elif [[ "$1" == "nullness" ]]; then
+  make -C $ROOT/daikon/java check-nullness
 elif [[ "$1" == "regex" ]]; then
   make -C $ROOT/daikon/java check-regex
 elif [[ "$1" == "signature" ]]; then

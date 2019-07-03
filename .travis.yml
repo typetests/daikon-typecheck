@@ -18,8 +18,7 @@ env:
   - GROUP=index
   - GROUP=interning
   - GROUP=lock
-  - GROUP=nullness-fbc
-  - GROUP=nullness-raw
+  - GROUP=nullness
   - GROUP=regex
   - GROUP=signature
 ## This is just to determine the time to do the background build.
