@@ -1,0 +1,67 @@
+jobs:
+- job: formatter_jdk8
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/ubuntu-for-cf-jdk8:latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: ./build.sh formatter
+    displayName: formatter
+- job: index_jdk8
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/ubuntu-for-cf-jdk8:latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: ./build.sh index
+    displayName: index
+- job: interning_jdk8
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/ubuntu-for-cf-jdk8:latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: ./build.sh interning
+    displayName: interning
+- job: lock_jdk8
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/ubuntu-for-cf-jdk8:latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: ./build.sh lock
+    displayName: lock
+- job: nullness_jdk8
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/ubuntu-for-cf-jdk8:latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: ./build.sh nullness
+    displayName: nullness
+- job: regex_jdk8
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/ubuntu-for-cf-jdk8:latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: ./build.sh regex
+    displayName: regex
+- job: signature_jdk8
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/ubuntu-for-cf-jdk8:latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - bash: ./build.sh signature
+    displayName: signature
+
+trigger:
+  batch: true
