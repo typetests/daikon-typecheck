@@ -2,7 +2,7 @@ jobs:
 - job: formatter_jdk8
   pool:
     vmImage: 'ubuntu-16.04'
-  container: mdernst/ubuntu-for-daikon-jdk8:latest
+  container: mdernst/ubuntu-for-cf-jdk8:latest
   steps:
   - checkout: self
     fetchDepth: 1
@@ -11,7 +11,7 @@ jobs:
 - job: index_jdk8
   pool:
     vmImage: 'ubuntu-16.04'
-  container: mdernst/ubuntu-for-daikon-jdk8:latest
+  container: mdernst/ubuntu-for-cf-jdk8:latest
   steps:
   - checkout: self
     fetchDepth: 1
@@ -20,7 +20,7 @@ jobs:
 - job: interning_jdk8
   pool:
     vmImage: 'ubuntu-16.04'
-  container: mdernst/ubuntu-for-daikon-jdk8:latest
+  container: mdernst/ubuntu-for-cf-jdk8:latest
   steps:
   - checkout: self
     fetchDepth: 1
@@ -29,7 +29,7 @@ jobs:
 - job: lock_jdk8
   pool:
     vmImage: 'ubuntu-16.04'
-  container: mdernst/ubuntu-for-daikon-jdk8:latest
+  container: mdernst/ubuntu-for-cf-jdk8:latest
   steps:
   - checkout: self
     fetchDepth: 1
@@ -38,7 +38,7 @@ jobs:
 - job: nullness_jdk8
   pool:
     vmImage: 'ubuntu-16.04'
-  container: mdernst/ubuntu-for-daikon-jdk8:latest
+  container: mdernst/ubuntu-for-cf-jdk8:latest
   steps:
   - checkout: self
     fetchDepth: 1
@@ -47,7 +47,7 @@ jobs:
 - job: regex_jdk8
   pool:
     vmImage: 'ubuntu-16.04'
-  container: mdernst/ubuntu-for-daikon-jdk8:latest
+  container: mdernst/ubuntu-for-cf-jdk8:latest
   steps:
   - checkout: self
     fetchDepth: 1
@@ -56,7 +56,7 @@ jobs:
 - job: signature_jdk8
   pool:
     vmImage: 'ubuntu-16.04'
-  container: mdernst/ubuntu-for-daikon-jdk8:latest
+  container: mdernst/ubuntu-for-cf-jdk8:latest
   steps:
   - checkout: self
     fetchDepth: 1
