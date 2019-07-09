@@ -12,6 +12,8 @@ set -e
 # echo "Should next trigger downstream jobs."
 # exit 0
 
+export JAVA_HOME=${JAVA_HOME:-`which javac|xargs readlink -f|xargs dirname|xargs dirname`}
+
 BRANCH=master
 
 ## Build Checker Framework
