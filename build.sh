@@ -1,16 +1,18 @@
 #!/bin/bash
-ROOT=$TRAVIS_BUILD_DIR/..
 
 # Required argument $1 is one of:
-#   formatter, interning, lock, nullness, regex, signature, nothing
+#   all, formatter, index, interning, lock, nullness, regex, signature, nothing
 
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Fail the whole script if any command fails
 set -e
 
-## Short version, intended to be used when triggering downstream Travis jobs.
-echo "Should next trigger downstream jobs."
-true
+# ## Short version, intended to be used when triggering downstream Travis jobs.
+# echo "Should next trigger downstream jobs."
+# exit 0
+
+export JAVA_HOME=${JAVA_HOME:-`which javac|xargs readlink -f|xargs dirname|xargs dirname`}
 
 BRANCH=master
 
@@ -22,8 +24,6 @@ export CHECKERFRAMEWORK=$ROOT/checker-framework
 
 ## Obtain daikon
 (cd $ROOT && git clone --depth 1 https://github.com/codespecs/daikon.git) || (cd $ROOT && git clone --depth 1 https://github.com/codespecs/daikon.git)
-## Is the dyncomp-jdk task needed?
-# make -C $ROOT/daikon/java compile dyncomp-jdk
 make -C $ROOT/daikon/java compile
 make -C $ROOT/daikon daikon.jar
 
@@ -43,7 +43,9 @@ echo ""
 # for all but one type system.  So, I could probably fit them into fewer
 # jobs if I want.
 
-if [[ "$1" == "formatter" ]]; then
+if [[ "$1" == "all" ]]; then
+  make -C $ROOT/daikon/java check-all
+elif [[ "$1" == "formatter" ]]; then
   make -C $ROOT/daikon/java check-formatter
 elif [[ "$1" == "index" ]]; then
   make -C $ROOT/daikon/java check-index
