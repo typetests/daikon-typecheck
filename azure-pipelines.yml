@@ -62,6 +62,3 @@ jobs:
     fetchDepth: 1
   - bash: ./build.sh signature
     displayName: signature
-
-trigger:
-  batch: true
