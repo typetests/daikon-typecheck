@@ -18,7 +18,7 @@ BRANCH=master
 
 ## Build Checker Framework
 (cd $ROOT && git clone --depth 1 --branch $BRANCH https://github.com/typetools/checker-framework.git) || (cd $ROOT && git clone --depth 1 --branch $BRANCH https://github.com/typetools/checker-framework.git)
-# This also builds annotation-tools and jsr308-langtools
+# This also builds annotation-tools
 (cd $ROOT/checker-framework/ && ./.travis-build-without-test.sh downloadjdk)
 export CHECKERFRAMEWORK=$ROOT/checker-framework
 
