@@ -1,7 +1,7 @@
 jobs:
 - job: formatter_jdk8
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   container: mdernst/cf-ubuntu-jdk8-plus:latest
   steps:
   - checkout: self
@@ -10,7 +10,7 @@ jobs:
     displayName: formatter
 - job: index_jdk8
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   container: mdernst/cf-ubuntu-jdk8-plus:latest
   steps:
   - checkout: self
@@ -19,7 +19,7 @@ jobs:
     displayName: index
 - job: interning_jdk8
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   container: mdernst/cf-ubuntu-jdk8-plus:latest
   steps:
   - checkout: self
@@ -28,7 +28,7 @@ jobs:
     displayName: interning
 - job: lock_jdk8
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   container: mdernst/cf-ubuntu-jdk8-plus:latest
   steps:
   - checkout: self
@@ -37,7 +37,7 @@ jobs:
     displayName: lock
 - job: nullness_jdk8
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   container: mdernst/cf-ubuntu-jdk8-plus:latest
   steps:
   - checkout: self
@@ -46,7 +46,7 @@ jobs:
     displayName: nullness
 - job: regex_jdk8
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   container: mdernst/cf-ubuntu-jdk8-plus:latest
   steps:
   - checkout: self
@@ -55,7 +55,7 @@ jobs:
     displayName: regex
 - job: signature_jdk8
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   container: mdernst/cf-ubuntu-jdk8-plus:latest
   steps:
   - checkout: self
