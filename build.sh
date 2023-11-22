@@ -17,13 +17,13 @@ export JAVA_HOME=${JAVA_HOME:-`which javac|xargs readlink -f|xargs dirname|xargs
 BRANCH=master
 
 ## Build Checker Framework
-(cd $ROOT && git clone --depth 1 --branch $BRANCH https://github.com/typetools/checker-framework.git) || (cd $ROOT && git clone --depth 1 --branch $BRANCH https://github.com/typetools/checker-framework.git)
+(cd $ROOT && git clone --filter=blob:none --branch $BRANCH https://github.com/typetools/checker-framework.git) || (cd $ROOT && git clone --filter=blob:none --branch $BRANCH https://github.com/typetools/checker-framework.git)
 # This also builds annotation-tools
 (cd $ROOT/checker-framework/ && ./.travis-build-without-test.sh downloadjdk)
 export CHECKERFRAMEWORK=$ROOT/checker-framework
 
 ## Obtain daikon
-(cd $ROOT && git clone --depth 1 https://github.com/codespecs/daikon.git) || (cd $ROOT && git clone --depth 1 https://github.com/codespecs/daikon.git)
+(cd $ROOT && git clone --filter=blob:none https://github.com/codespecs/daikon.git) || (cd $ROOT && git clone --filter=blob:none https://github.com/codespecs/daikon.git)
 make -C $ROOT/daikon/java compile
 make -C $ROOT/daikon daikon.jar
 
